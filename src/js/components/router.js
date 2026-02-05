@@ -43,6 +43,8 @@ const router = (route, authenticationFn) => {
   // Authentication process goes here...
   if (authenticationFn) {
     authed = authenticationFn();
+  } else {
+    console.log(`authenticationFn`);
   }
 
   if (!authed) {
